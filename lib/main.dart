@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const int myThreshold = 13;
+
 void main() {
   runApp(const MyApp());
 }
@@ -115,6 +117,15 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            if (_counter > myThreshold)
+              const Text(
+                "You're on a roll!",
+                style: TextStyle(
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
           ],
         ),
       ),
