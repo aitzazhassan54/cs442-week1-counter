@@ -111,6 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             Text('Resets used: $_resetCount'),
+            const SizedBox(height: 24),
+            const Text('Built by Aitzaz ul Hassan · 04072313026'),
           ],
         ),
       ),
