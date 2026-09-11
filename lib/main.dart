@@ -57,7 +57,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
+  int _resetCount = 0;
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -72,6 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _resetCounter() {
     setState(() {
       _counter = 0;
+      _resetCount++;
     });
   }
 
@@ -126,6 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 18,
                 ),
               ),
+            Text('Resets used: $_resetCount'),
           ],
         ),
       ),
